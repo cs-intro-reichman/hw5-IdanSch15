@@ -42,12 +42,12 @@ public class Wordle {
 		
         for (int i = 0; i < guess.length(); i++) {
 
-            if (containsChar(secret, guess.charAt(i))) {
-                if (secret.indexOf(guess.charAt(i)) == guess.indexOf(guess.charAt(i))) {
-                    resultRow[i] = 'G';
-                }
+            
+            if (guess.charAt(i) == secret.charAt(i)) {
+                resultRow[i] = 'G';
+            }
 
-                else {
+            else if (containsChar(secret, guess.charAt(i))) { {
                     resultRow[i] = 'Y';
                 }
                 
@@ -134,7 +134,7 @@ public class Wordle {
             // Loop until you read a valid guess
             while (!valid) {
                 System.out.print("Enter your guess (5-letter word): ");
-                guess += new In();
+                guess = inp.readLine().toUpperCase();
                 
                 if (guess.length() != secret.length()) {
                     System.out.println("Invalid word. Please try again.");
