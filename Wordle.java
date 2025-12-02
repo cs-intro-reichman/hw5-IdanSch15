@@ -25,7 +25,7 @@ public class Wordle {
     // return false.
     public static boolean containsChar(String secret, char c) {
 		
-        for (int i = 0; i < secret.length() - 1; i++) {
+        for (int i = 0; i < secret.length(); i++) {
 
             if (secret.charAt(i) == c) {
                 return true;
