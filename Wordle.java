@@ -1,3 +1,9 @@
+/**
+Feedback
+-containsChar - think about using indexOf :)
+code looks good
+**/
+
 public class Wordle {
 
     // Reads all words from dictionary filename into a String array.
